@@ -54,6 +54,7 @@ public class JSONPathTest {
     Method m = c.getDeclaredMethod("eq", Reflector.forName("java.lang.Object"), Reflector.forName("java.lang.Object"));
     m.setAccessible(true);
     boolean retval = (Boolean)m.invoke(null, a, b);
+    System.out.println("retval = " + retval);
     // Assert result
     Assert.assertEquals(false, retval);
   }
